@@ -3,43 +3,43 @@ import time
 
 print('Oyun başlayır...')
 
-time.sleep(3)
+time.sleep(2)
 
 def oyna():
     istifadecininXali = 0
     komputerinXali = 0
 
     for i in range(3):
-        siyahi = ['daş' , 'kağız' , 'qayçı', 'das', 'kagiz', 'qayci']
+        siyahi = ['das', 'kagiz', 'qayci']
         istifadecininSecimi = input('Bunlardan birini seçin: daş, kağız, qayçı\n')
         komputerinSecimi = random.choice(siyahi)
 
         if istifadecininSecimi == 'daş' or istifadecininSecimi == 'das':
-            if komputerinSecimi == 'kağız' or komputerinSecimi == 'kagiz':
+            if komputerinSecimi == 'kagiz':
                 print('Kompüter qalib gəldi')
                 komputerinXali += 1
-            elif komputerinSecimi == 'qayçı'or komputerinSecimi == 'qayci':
+            elif komputerinSecimi == 'qayci':
                 print('Siz qalib gəldiniz')
                 istifadecininXali += 1
-            elif komputerinSecimi == 'daş' or komputerinSecimi == 'das': 
+            elif komputerinSecimi == 'das': 
                 print('Bərabərlik')
         elif istifadecininSecimi == 'kağız' or istifadecininSecimi == 'kagiz':
-            if komputerinSecimi == 'qayçı' or komputerinSecimi == 'qayci':
+            if komputerinSecimi == 'qayci':
                 print('Kompüter qalib gəldi')
                 komputerinXali += 1
-            elif komputerinSecimi == 'daş' or komputerinSecimi == 'das':
+            elif komputerinSecimi == 'das':
                 print('Siz qalib gəldiniz')
                 istifadecininXali += 1
-            elif komputerinSecimi == 'kağız' or komputerinSecimi == 'kagiz':
+            elif komputerinSecimi == 'kagiz':
                 print('Bərabərlik')
         elif istifadecininSecimi == 'qayçı' or istifadecininSecimi == 'qayci':
-            if komputerinSecimi == 'daş' or komputerinSecimi == 'das':
+            if komputerinSecimi == 'das':
                 print('Kompüter qalib gəldi')
                 komputerinXali += 1
-            elif komputerinSecimi == 'kağız' or komputerinSecimi == 'kagiz':
+            elif komputerinSecimi == 'kagiz':
                 print('Siz qalib gəldiniz')
                 istifadecininXali += 1
-            elif komputerinSecimi == 'qayçı' or komputerinSecimi == 'qayci':
+            elif komputerinSecimi == 'qayci':
                 print('Bərabərlik')
 
     if komputerinXali > istifadecininXali:
